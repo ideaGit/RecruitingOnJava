@@ -14,11 +14,15 @@ public class AdminController {
     @Autowired
     private UserDao userDao;
 
-
     @RequestMapping(value = "/admin")
     public String view(ModelMap modelMap) {
         List<User> users = userDao.all();
         modelMap.put("users", users);
         return "admin";
+    }
+
+    @RequestMapping(value = "/login")
+    public String login() {
+        return "admin_login";
     }
 }

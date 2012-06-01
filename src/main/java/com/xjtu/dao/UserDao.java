@@ -24,4 +24,5 @@ public class UserDao {
         entityManager.createQuery("delete from User").executeUpdate();
     }
 
+
 }

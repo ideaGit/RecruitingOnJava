@@ -14,7 +14,7 @@ dependencies {
             "org.hibernate:hibernate-core:4.1.2.Final","org.hibernate:hibernate-entitymanager:4.1.2.Final",
             "org.hibernate:hibernate-validator:4.3.0.Beta1","commons-dbcp:commons-dbcp:1.4",
             "junit:junit:4.10","mysql:mysql-connector-java:5.1.19","javax.servlet:jstl:1.2",
-            "javax.servlet:servlet-api:2.5", "log4j:log4j:1.2.16", "cglib:cglib:2.2.2")
+            "javax.servlet:servlet-api:2.5", "log4j:log4j:1.2.16", "cglib:cglib:2.2.2", "org.mockito:mockito-all:1.9.0")
 }
 
 [jettyRun]*.with {
