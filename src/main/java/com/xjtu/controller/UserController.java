@@ -18,8 +18,10 @@ public class UserController {
 
     @Transactional
     @RequestMapping(value = "/user", method = RequestMethod.POST)
-    public String index(@RequestParam("name") String name, @RequestParam("university") String university) {
-        userDao.save(new User(name, university));
+    public String index(@RequestParam("name") String name, @RequestParam("university") String university,
+                        @RequestParam("phone") String phone, @RequestParam("email") String email,
+                        @RequestParam("major") String major) {
+        userDao.save(new User(name, university, phone, email, major));
         return "success";
     }
 }

@@ -19,7 +19,7 @@ public class UserDaoTest extends AbstractTransactionalJUnit4SpringContextTests {
     @Test
     public void should_select_all_users() throws Exception {
         userDao.deleteAll();
-        User user = new User("wangyan", "xjty");
+        User user = new User("wangyan", "xjty", "asd", "asd", "asd");
         userDao.save(user);
         assertEquals(1, userDao.all().size());
     }
@@ -32,6 +32,7 @@ public class UserDaoTest extends AbstractTransactionalJUnit4SpringContextTests {
         userDao.save(user);
         assertEquals("1333333333", userDao.all().get(0).getPhone());
     }
+
     @Test
     public void should_save_email_for_user () {
         userDao.deleteAll();
@@ -40,6 +41,7 @@ public class UserDaoTest extends AbstractTransactionalJUnit4SpringContextTests {
         userDao.save(user);
         assertEquals("bonnshore@gmail.com", userDao.all().get(0).getEmail());
     }
+
     @Test
     public void shoule_save_major_for_user(){
         userDao.deleteAll();
@@ -47,7 +49,6 @@ public class UserDaoTest extends AbstractTransactionalJUnit4SpringContextTests {
         user.setMajor("software");
         userDao.save(user);
         assertEquals("software", userDao.all().get(0).getMajor());
-
     }
 
 }

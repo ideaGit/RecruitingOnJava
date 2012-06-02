@@ -40,9 +40,12 @@ public class User {
     public User() {
     }
 
-    public User(String name, String university) {
+    public User(String name, String university, String phone, String email, String major) {
         this.university = university;
         this.name = name;
+        this.email = email;
+        this.major = major;
+        this.phone = phone;
     }
 
     public void setPhone(String phone) {
