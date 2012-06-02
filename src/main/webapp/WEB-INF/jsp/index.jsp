@@ -22,6 +22,24 @@
                 <input name="university" type="text" id="university">
             </div>
         </div>
+        <div class="control-group">
+            <label for="phone" class="control-label">Phone</label>
+            <div class="controls">
+                <input name="phone" type="text" id="phone">
+            </div>
+        </div>
+        <div class="control-group">
+            <label for="email" class="control-label">Email</label>
+            <div class="controls">
+                <input name="email" type="text" id="email">
+            </div>
+        </div>
+        <div class="control-group">
+            <label for="major" class="control-label">Major</label>
+            <div class="controls">
+                <input name="major" type="text" id="major">
+            </div>
+        </div>
         <div class="form-actions">
             <input class="btn btn-primary" type="submit" value="Save Changes" />
         </div>
