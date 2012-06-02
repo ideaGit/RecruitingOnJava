@@ -54,6 +54,7 @@ define 'app' do
   end
 
   project.version = VERSION_NUMBER
+  compile.options.source = '1.6'
   compile.options.target = '1.6'
 
   WEB_DEPENDENCY = struct(
