@@ -14,6 +14,12 @@ public class User {
 
     private String university;
 
+    private String phone;
+
+    private String email;
+    private String major;
+
+
     public String getName() {
         return name;
     }
@@ -34,8 +40,35 @@ public class User {
     public User() {
     }
 
-    public User(String name, String university) {
+    public User(String name, String university, String phone, String email, String major) {
         this.university = university;
         this.name = name;
+        this.email = email;
+        this.major = major;
+        this.phone = phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getMajor() {
+        return major;
+    }
+
+    public void setMajor(String major) {
+        this.major = major;
     }
 }

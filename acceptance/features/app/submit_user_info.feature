@@ -6,5 +6,9 @@ Feature:  As an student
     Given I am on the submit page
     When I fill "Name" as "Xiao Zhang"
     And I fill "University" as "XJTU"
+    And I fill "Phone" as "123456789"
+    And I fill "Email" as "bonnshore@gmail.com"
+    And I fill "Major" as "Software Engineering"
     And I click "Save Changes" button
     Then I should see success message
+
