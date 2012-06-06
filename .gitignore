@@ -7,3 +7,4 @@ build/*
 out/*
 .idea/*
 reports
+src/main/resources/config.properties
