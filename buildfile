@@ -11,6 +11,8 @@ VERSION_NUMBER = '1.0'
 
 require "./dependency.rb"
 
+Rake::Task['config:generate'].execute
+
 define 'app' do
 
   Dir.chdir PROJECT_ROOT do

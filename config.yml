@@ -1,0 +1,8 @@
+local:
+  database_url: jdbc:mysql://localhost/recruiting
+  database_user: root
+  database_password:
+ci:
+  database_url: jdbc:mysql://ec2-50-19-213-178.compute-1.amazonaws.com/ideaGit_recruiting
+  database_user: ideaGit
+  database_password: s3cr3t
