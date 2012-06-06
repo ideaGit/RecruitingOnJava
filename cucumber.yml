@@ -1,0 +1,2 @@
+default: -r acceptance/features -f pretty -f junit -o reports/cucumber/
+acceptance: -t ~@wip -p default

@@ -1,5 +1,7 @@
 require 'buildr/jetty'
 require 'readline'
+require 'cucumber'
+require 'cucumber/rake/task'
 
 PROJECT_ROOT = File.join(File.dirname(__FILE__), ".")
 
@@ -40,15 +42,8 @@ define 'app' do
     Readline::readline('[Type ENTER to stop Jetty]')
   end
 
-  task('asset') do |task|
-    Dir.chdir PROJECT_ROOT do
-      rm_rf 'src/main/webapp/img'
-      rm_rf 'src/main/webapp/css'
-      rm_rf 'src/main/webapp/js'
-      cp_r 'assets/bootstrap/img', 'src/main/webapp/img'
-      cp_r 'assets/bootstrap/css', 'src/main/webapp/css'
-      cp_r 'assets/bootstrap/js', 'src/main/webapp/js'
-    end
+  Cucumber::Rake::Task.new(:acceptance => "jetty") do |t|
+    t.cucumber_opts = ["--profile acceptance", "acceptance/features"]
   end
 
 end
