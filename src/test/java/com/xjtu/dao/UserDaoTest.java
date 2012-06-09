@@ -7,7 +7,11 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 
+import javax.validation.ConstraintViolationException;
+
+import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
 @ContextConfiguration(locations = {"classpath:applicationContext.xml"})
 @TransactionConfiguration(defaultRollback = false)
@@ -28,6 +32,7 @@ public class UserDaoTest extends AbstractTransactionalJUnit4SpringContextTests {
     public void should_save_phone_number_for_user () {
         userDao.deleteAll();
         User user = new User();
+        user.setName("name");
         user.setPhone("1333333333");
         userDao.save(user);
         assertEquals("1333333333", userDao.all().get(0).getPhone());
@@ -37,6 +42,7 @@ public class UserDaoTest extends AbstractTransactionalJUnit4SpringContextTests {
     public void should_save_email_for_user () {
         userDao.deleteAll();
         User user = new User();
+        user.setName("name");
         user.setEmail("bonnshore@gmail.com");
         userDao.save(user);
         assertEquals("bonnshore@gmail.com", userDao.all().get(0).getEmail());
@@ -46,6 +52,7 @@ public class UserDaoTest extends AbstractTransactionalJUnit4SpringContextTests {
     public void shoule_save_major_for_user(){
         userDao.deleteAll();
         User user = new User();
+        user.setName("name");
         user.setMajor("software");
         userDao.save(user);
         assertEquals("software", userDao.all().get(0).getMajor());

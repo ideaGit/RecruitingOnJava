@@ -22,6 +22,7 @@ public class UserController {
                         @RequestParam("major") String major) {
         userDao.save(new User(name, university, phone, email, major));
         return "success";
+
     }
 
     public void setDao(UserDao dao) {

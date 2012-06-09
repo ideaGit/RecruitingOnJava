@@ -1,5 +1,7 @@
 package com.xjtu.domain;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,6 +15,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @NotEmpty(message = "Name can not be empty")
     private String name;
 
     private String university;
@@ -73,5 +76,9 @@ public class User {
 
     public void setMajor(String major) {
         this.major = major;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
