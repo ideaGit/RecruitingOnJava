@@ -10,7 +10,7 @@
     <script type="text/javascript" src="/js/bootstrap.js"></script>
 </head>
 <body>
-    <div>
+    <div class="alert alert-error">
         <ul>
         <c:forEach items="${errors}" var="error">
             <li>${error}</li>
