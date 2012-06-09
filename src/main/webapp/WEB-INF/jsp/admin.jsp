@@ -17,17 +17,17 @@
         <td>university</td>
         <td>email</td>
         <td>major</td>
-        <td>tel</td>
+        <td>phone</td>
     </tr>
     </thead>
     <tbody>
     <c:forEach items="${users}" var="user">
     	<tr>
           <td>${user.name}</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>${user.university}</td>
+          <td>${user.email}</td>
+          <td>${user.major}</td>
+          <td>${user.phone}</td>
         </tr>
 
     </c:forEach>
