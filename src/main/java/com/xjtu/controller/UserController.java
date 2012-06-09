@@ -2,7 +2,6 @@ package com.xjtu.controller;
 
 import com.xjtu.dao.UserDao;
 import com.xjtu.domain.User;
-import org.jboss.logging.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
