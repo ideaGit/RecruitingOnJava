@@ -37,12 +37,16 @@ define 'app' do
 
   Java.classpath << JETTY_JSP
 
+  task('jetty-run' => [package(:war), jetty.use]) do |task|
+    jetty.deploy('http://localhost:8080', task.prerequisites.first)
+  end
+
   task('jetty' => [package(:war), jetty.use]) do |task|
     jetty.deploy('http://localhost:8080', task.prerequisites.first)
     Readline::readline('[Type ENTER to stop Jetty]')
   end
 
-  Cucumber::Rake::Task.new(:acceptance => "jetty") do |t|
+  Cucumber::Rake::Task.new(:acceptance => "jetty-run") do |t|
     t.cucumber_opts = ["--profile acceptance", "acceptance/features"]
   end
 
