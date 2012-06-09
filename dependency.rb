@@ -25,7 +25,8 @@ DATABASE = struct(
 )
 
 TEST = struct(
-  :unit => transitive('junit:junit:jar:4.10')
+  :unit => transitive('junit:junit:jar:4.10'),
+  :mock => 'org.mockito:mockito-all:jar:1.8.5'
 )
 
 SERVLET = struct(

@@ -31,9 +31,14 @@ define 'app' do
     :log => LOG
   )
 
+  TEST_DEPENDENCY = struct(
+    :test => TEST
+  )
+
   compile.with WEB_DEPENDENCY
   package(:war).with :libs => WEB_DEPENDENCY
   test.using :junit
+  test.with TEST_DEPENDENCY
 
   Java.classpath << JETTY_JSP
 
