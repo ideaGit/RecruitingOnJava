@@ -23,4 +23,8 @@ public class UserController {
         userDao.save(new User(name, university, phone, email, major));
         return "success";
     }
+
+    public void setDao(UserDao dao) {
+        this.userDao = dao;
+    }
 }
