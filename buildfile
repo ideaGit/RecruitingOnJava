@@ -48,4 +48,4 @@ define 'app' do
 
 end
 
-task :ci => ['app:acceptance']
+task :ci => ['checkstyle', 'app:acceptance']
