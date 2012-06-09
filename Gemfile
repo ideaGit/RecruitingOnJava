@@ -9,3 +9,7 @@ group(:test) do
   gem 'ruby-mysql'
   gem 'json'
 end
+
+group(:development) do
+  gem 'ruby-debug'
+end
