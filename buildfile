@@ -47,3 +47,5 @@ define 'app' do
   end
 
 end
+
+task :ci => ['app:acceptance']
