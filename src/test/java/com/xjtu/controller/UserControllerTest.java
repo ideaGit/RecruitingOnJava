@@ -23,7 +23,7 @@ public class UserControllerTest {
 
     @Test
     public void should_create_a_user_and_save_him() {
-        controller.index("Zhang San", "XJTU", "123987", "abc@abc.com", "Software");
+        controller.index("Zhang San", "XJTU", "123987", "abc@abc.com", "Software", null);
 
         verify(dao).save(any(User.class));
     }
