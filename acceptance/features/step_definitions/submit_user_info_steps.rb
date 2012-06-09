@@ -13,3 +13,11 @@ end
 When /^I click "([^"]*)" button$/ do |label|
   click_button label
 end
+
+Then /^I should see the following in database:$/ do |table|
+  queries = table.rows_hash.map do |key, value|
+    "#{key} = '#{value}'"
+  end
+  where = queries.join ' and '
+  should have_user_like where
+end

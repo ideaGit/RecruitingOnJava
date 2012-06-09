@@ -3,8 +3,6 @@ require 'readline'
 require 'cucumber'
 require 'cucumber/rake/task'
 
-PROJECT_ROOT = File.join(File.dirname(__FILE__), ".")
-
 repositories.remote << 'http://repo1.maven.org/maven2'
 
 VERSION_NUMBER = '1.0'

@@ -10,5 +10,10 @@ Feature:  As an student
     And I fill "Email" as "bonnshore@gmail.com"
     And I fill "Major" as "Software Engineering"
     And I click "Save Changes" button
-    Then I should see success message
+    Then I should see the following in database:
+      | name       | Xiao Zhang           |
+      | university | XJTU                 |
+      | phone      | 123456789            |
+      | email      | bonnshore@gmail.com  |
+      | major      | Software Engineering |
 
