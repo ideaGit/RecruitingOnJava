@@ -5,7 +5,7 @@ module User
       connection.query("SELECT 1 FROM users WHERE #{where_condition}")
     end
 
-    results.count > 0
+    results.num_rows > 0
   end
 
 end
