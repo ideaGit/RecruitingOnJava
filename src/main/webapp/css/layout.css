@@ -1,0 +1,18 @@
+.banner{
+    height:60px;
+    background:rgba(0,0,0,0.6);
+    margin-bottom:30px;
+    padding-left:20px;
+}
+.banner img{
+    height:70px;
+}
+
+.main-content{
+
+}
+
+.footer{
+     height:40px;
+     background:rgba(0,0,0,0.6);
+}

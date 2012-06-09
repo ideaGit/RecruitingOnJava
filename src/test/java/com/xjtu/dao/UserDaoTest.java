@@ -58,4 +58,5 @@ public class UserDaoTest extends AbstractTransactionalJUnit4SpringContextTests {
         assertEquals("software", userDao.all().get(0).getMajor());
     }
 
+
 }

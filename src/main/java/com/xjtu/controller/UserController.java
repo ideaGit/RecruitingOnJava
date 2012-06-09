@@ -50,7 +50,6 @@ public class UserController {
             modelMap.put("errors", errors);
             return "index";
         }
-
     }
 
     public void setDao(UserDao dao) {

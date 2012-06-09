@@ -6,32 +6,45 @@
     <title>Recruiting</title>
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="/css/layout.css" />
+
     <script type="text/javascript" src="/js/jquery-1.7.2.js"></script>
     <script type="text/javascript" src="/js/bootstrap.js"></script>
 </head>
 <body>
-    <table class="table">
-    <thead>
-    <tr>
-        <td>name</td>
-        <td>university</td>
-        <td>email</td>
-        <td>major</td>
-        <td>phone</td>
-    </tr>
-    </thead>
-    <tbody>
-    <c:forEach items="${users}" var="user">
-    	<tr>
-          <td>${user.name}</td>
-          <td>${user.university}</td>
-          <td>${user.email}</td>
-          <td>${user.major}</td>
-          <td>${user.phone}</td>
+<div class="content">
+    <div class="banner">
+        <img src="img/logo.png" />
+    </div>
+    <div class="main-content container-fluid">
+        <table class="table table-striped table-bordered ">
+        <thead>
+        <tr>
+            <th>name</th>
+            <th>university</th>
+            <th>email</th>
+            <th>major</th>
+            <th>phone</th>
         </tr>
+        </thead>
+        <tbody>
+        <c:forEach items="${users}" var="user">
+            <tr>
+              <td>${user.name}</td>
+              <td>${user.university}</td>
+              <td>${user.email}</td>
+              <td>${user.major}</td>
+              <td>${user.phone}</td>
+            </tr>
+        </c:forEach>
+        </tbody>
+        </table>
+        <hr>
+        <footer>
+             <p>@ideaGit 2012</p>
+        </footer>
+    </div>
 
-    </c:forEach>
-    </tbody>
-    </table>
+</div>
 </body>
 </html>
