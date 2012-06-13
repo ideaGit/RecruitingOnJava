@@ -31,6 +31,9 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 0.1.4)
+    capybara-mechanize (0.3.0)
+      capybara (~> 1.1)
+      mechanize (~> 2.3)
     childprocess (0.3.2)
       ffi (~> 1.0.6)
     columnize (0.3.6)
@@ -41,6 +44,8 @@ GEM
       json (>= 1.4.6)
       term-ansicolor (>= 1.0.6)
     diff-lcs (1.1.2)
+    domain_name (0.5.3)
+      unf (~> 0.0.3)
     ffi (1.0.11)
     gherkin (2.9.3)
       json (>= 1.4.6)
@@ -54,14 +59,25 @@ GEM
       addressable
     linecache (0.46)
       rbx-require-relative (> 0.0.4)
+    mechanize (2.5.1)
+      domain_name (~> 0.5, >= 0.5.1)
+      mime-types (~> 1.17, >= 1.17.2)
+      net-http-digest_auth (~> 1.1, >= 1.1.1)
+      net-http-persistent (~> 2.5, >= 2.5.2)
+      nokogiri (~> 1.4)
+      ntlm-http (~> 0.1, >= 0.1.1)
+      webrobots (~> 0.0, >= 0.0.9)
     mime-types (1.18)
     minitar (0.5.3)
     multi_json (1.3.5)
     mysql (2.8.1)
+    net-http-digest_auth (1.2.1)
+    net-http-persistent (2.7)
     net-sftp (2.0.4)
       net-ssh (>= 2.0.9)
     net-ssh (2.0.23)
     nokogiri (1.5.2)
+    ntlm-http (0.1.1)
     rack (1.4.1)
     rack-protection (1.2.0)
       rack
@@ -98,6 +114,10 @@ GEM
       tilt (~> 1.3, >= 1.3.3)
     term-ansicolor (1.0.7)
     tilt (1.3.3)
+    unf (0.0.5)
+      unf_ext
+    unf_ext (0.0.5)
+    webrobots (0.0.13)
     xml-simple (1.0.12)
     xpath (0.1.4)
       nokogiri (~> 1.3)
@@ -108,6 +128,7 @@ PLATFORMS
 DEPENDENCIES
   buildr
   capybara
+  capybara-mechanize
   cucumber
   json
   mysql
