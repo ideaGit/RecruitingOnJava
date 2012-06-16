@@ -2,7 +2,6 @@ Feature:  As an admin
   I want to view all the basic information in a list,
   so that I can be clear about the candidates.
 
-  @wip
   Scenario: admin view candidates information
     Given a candidate submit his information as following:
       | name       | Xiao Zhang           |
