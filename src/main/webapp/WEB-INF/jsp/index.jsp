@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,13 +11,15 @@
     <script type="text/javascript" src="/js/bootstrap.js"></script>
 </head>
 <body>
-    <div class="alert alert-error">
-        <ul>
-        <c:forEach items="${errors}" var="error">
-            <li>${error}</li>
-        </c:forEach>
-        </ul>
-    </div>
+    <c:if test="${fn:length(errors) > 0}">
+        <div class="alert alert-error">
+            <ul>
+                <c:forEach items="${errors}" var="error">
+                    <li>${error}</li>
+                </c:forEach>
+            </ul>
+        </div>
+    </c:if>
     <form method="POST" action="/user" class="well form-horizontal">
         <div class="control-group">
             <label for="name" class="control-label">Your Name</label>
