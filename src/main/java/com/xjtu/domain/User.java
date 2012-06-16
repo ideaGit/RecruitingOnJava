@@ -18,11 +18,15 @@ public class User {
     @NotEmpty(message = "Name can not be empty")
     private String name;
 
+    @NotEmpty(message = "University can not be empty")
     private String university;
 
+    @NotEmpty(message = "Phone can not be empty")
     private String phone;
 
+    @NotEmpty(message = "Email can not be empty")
     private String email;
+    @NotEmpty(message = "Major can not be empty")
     private String major;
 
 

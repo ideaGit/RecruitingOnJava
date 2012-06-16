@@ -9,5 +9,5 @@ When /^I submit my username and password$/ do
 end
 
 Then /^I should be on admin page$/ do
-  
+
 end

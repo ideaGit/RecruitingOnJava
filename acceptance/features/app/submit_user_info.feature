@@ -21,12 +21,6 @@ Feature:  As an student
     Given I am on the submit page
     When I click "Save Changes" button
     Then I should see the error messages "Name can not be empty"
-
-  @wip
-  Scenario: Students submit their information with invalid data
-    Given I am on the submit page
-    When I click "Save Changes" button
-    Then I should see the error messages "Name can not be empty"
     And I should see the error messages "University can not be empty"
     And I should see the error messages "Phone can not be empty"
     And I should see the error messages "Email can not be empty"
