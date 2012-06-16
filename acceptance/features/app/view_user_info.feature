@@ -4,6 +4,16 @@ Feature:  As an admin
 
   @wip
   Scenario: admin view candidates information
-   Given a candidate submit his information
+    Given a candidate submit his information as following:
+      | name       | Xiao Zhang           |
+      | university | XJTU                 |
+      | phone      | 123456789            |
+      | email      | bonnshore@gmail.com  |
+      | major      | Software Engineering |
     When I am on the candidates information page
-    Then I can see the list of candidates information
+    Then I can see the following candidates information:
+      | name       | Xiao Zhang           |
+      | university | XJTU                 |
+      | phone      | 123456789            |
+      | email      | bonnshore@gmail.com  |
+      | major      | Software Engineering |
