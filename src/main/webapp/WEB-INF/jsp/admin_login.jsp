@@ -6,8 +6,10 @@
     <title>Admin_Login</title>
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="/css/layout.css" />
 </head>
 <body>
+<jsp:include page="/WEB-INF/template/header.jsp"/>
 <form method="POST" action="/admin" class="well form-horizontal">
         <div class="control-group">
             <label for="name" class="control-label">Your Name</label>
@@ -25,6 +27,6 @@
             <input class="btn btn-primary" type="submit" value="Login" />
         </div>
     </form>
-
+<jsp:include page="/WEB-INF/template/footer.jsp"/>
 </body>
 </html>

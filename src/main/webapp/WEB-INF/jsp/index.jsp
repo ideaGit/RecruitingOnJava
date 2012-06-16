@@ -7,10 +7,12 @@
     <title>Recruiting</title>
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="/css/layout.css" />
     <script type="text/javascript" src="/js/jquery-1.7.2.js"></script>
     <script type="text/javascript" src="/js/bootstrap.js"></script>
 </head>
 <body>
+    <jsp:include page="/WEB-INF/template/header.jsp"/>
     <c:if test="${fn:length(errors) > 0}">
         <div class="alert alert-error">
             <ul>
@@ -55,5 +57,6 @@
             <input class="btn btn-primary" type="submit" value="Save Changes" />
         </div>
     </form>
+    <jsp:include page="/WEB-INF/template/footer.jsp"/>
 </body>
 </html>

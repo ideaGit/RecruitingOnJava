@@ -13,9 +13,7 @@
 </head>
 <body>
 <div class="content">
-    <div class="banner">
-        <img src="img/logo.png" />
-    </div>
+    <jsp:include page="/WEB-INF/template/header.jsp"/>
     <div class="main-content container-fluid">
         <table class="table table-striped table-bordered ">
         <thead>
@@ -40,9 +38,7 @@
         </tbody>
         </table>
         <hr>
-        <footer>
-             <p>@ideaGit 2012</p>
-        </footer>
+        <jsp:include page="/WEB-INF/template/footer.jsp"/>
     </div>
 
 </div>
