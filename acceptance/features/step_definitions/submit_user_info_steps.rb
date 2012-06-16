@@ -21,3 +21,7 @@ Then /^I should see the following in database:$/ do |table|
   where = queries.join ' and '
   should have_user_like where
 end
+
+Then /^I should see the error messages "([^"]*)"$/ do |message|
+  find('.alert-error').should have_content(message)
+end
